@@ -33,7 +33,7 @@ body {
 
 .contact-container {
   width: 30%;
-  background-color: lightblue;
+  background-color: rgb(230, 182, 173);
 }
 
 .chat-container {
@@ -43,13 +43,16 @@ body {
 
 /* Sezione contatti */
 
-.user-container {
+.common-container {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   padding: 5px;
-  height: 50px;
+}
+
+.user-container {
   background-color: #eaeaea;
+  justify-content: space-between;
+  height: 50px;
 }
 
 .profile-pic {
@@ -73,4 +76,40 @@ body {
 .icons-container .fa-solid {
   color: #b1b1b1;
   margin: 0 7px;
+}
+
+.bell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px 0px 10px;
+  background-color: #effdfe;
+  padding: 10px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+.notify-container {
+  background-color: #8ad9f8;
+  height: 60px;
+}
+
+.fa-bell-slash {
+  font-size: 17px;
+  color: #8ad9f8;
+}
+
+.not-text {
+  line-height: 1;
+}
+
+.not-text div {
+  font-size: 12px;
+  margin-bottom: 0;
+}
+
+.not-text a {
+  font-size: 10px;
+  color: #386578;
 }
