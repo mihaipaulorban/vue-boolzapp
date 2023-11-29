@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Boolzapp</title>
 
+    <!-- GOOGLE FONT LATO -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
     <!-- BOOTSTRAP -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
@@ -26,6 +34,32 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- container principale con implementazione vue js -->
+    <div class="main-container" id="app">
+      <!-- container contatti -->
+      <div class="app-container contact-container">
+        <header class="user-container">
+          <div class="user-info">
+            <div class="profile-pic rounded-5">
+              <img src="img/avatar_1.jpg" class="avatar" alt="User Avatar" />
+            </div>
+            <div>Paul</div>
+          </div>
+          <div class="icons-container">
+            <i class="fa-solid fa-circle-notch"></i>
+            <i class="fa-solid fa-message"></i>
+            <i class="fa-solid fa-ellipsis-vertical"></i>
+          </div>
+        </header>
+      </div>
+      <!-- /container contatti -->
+
+      <!-- container chat -->
+      <div class="app-container chat-container"></div>
+      <!-- /container chat -->
+    </div>
+    <!-- /container principale con implementazione vue js -->
+
     <!-- VUE JS -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 

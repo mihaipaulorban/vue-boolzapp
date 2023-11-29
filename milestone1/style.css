@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-image: linear-gradient(to bottom, #009788 20%, #dbdbd1 20%);
+  background-size: 100% 100%;
+  background-attachment: fixed;
+  font-family: "Lato", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Container app principale */
+
+.main-container {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app-container {
+  height: 100%;
+}
+
+.contact-container {
+  width: 30%;
+  background-color: lightblue;
+}
+
+.chat-container {
+  width: 70%;
+  background-color: lightgreen;
+}
+
+/* Sezione contatti */
+
+.user-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  height: 50px;
+  background-color: #eaeaea;
+}
+
+.profile-pic {
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  margin-right: 10px;
+}
+.avatar {
+  width: 100%;
+  height: auto;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.icons-container .fa-solid {
+  color: #b1b1b1;
+  margin: 0 7px;
+}

@@ -8,7 +8,7 @@ La repo è divisa in cartelle che contengono l'avanzamento di ogni milestone, qu
 
 ## Milestone 1
 
-Per la milestone 1 dobbiamo ricreare la struttura `html`e `css` del progetto, includendo una struttra dati che andrá a gestire le informazioni di ogni conversazione.
+Per la milestone 1 dobbiamo ricreare la struttura `html`e `css` del progetto, includendo una struttura dati che andrá a gestire le informazioni di ogni conversazione.
 
 I dati vengono salvati in un array di oggetti (`contacts`) nel quale ci sono dei dati (`name`,`avatar`,`visible`) e un altro array di oggetti (`Messages`) in cui venogono salvati:
 
