@@ -15,3 +15,7 @@ I dati vengono salvati in un array di oggetti (`contacts`) nel quale ci sono dei
 - la data del messaggio con `date`
 - il contenuto del messaggio con`message`
 - lo status di invio o ricezione con `status`.
+
+Per l'interfaccia dell'header ho usato Vue per ottenere dinamicamente i dettagli del contatto, come l'avatar e il nome, dall'array dei contatti, con `contacts[1].avatar` e `contacts[1].name`.
+
+La stessa identica cosa viene fatta nella lista di contatti ma con un ciclo for, quindi vue scorre fra tutti gli oggetti degli array e genera un pannello per ogni contatto, essendo che non ho specificato un contatto specifico li genera tutti.

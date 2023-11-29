@@ -167,11 +167,77 @@ body {
 
 .contact-panel {
   background-color: white;
-  margin-bottom: solid grey 1px;
+  border-bottom: solid rgb(233, 233, 233) 1px;
   height: 60px;
 }
 
 .contact-list {
   max-height: calc(100% - 60px);
   overflow-y: auto;
+}
+
+/* Sezione Chat */
+
+.cavatar-text {
+  line-height: 1.5;
+}
+
+.cavatar-text div {
+  font-size: 15px;
+  margin-bottom: 0;
+}
+
+.cavatar-text div:last-child {
+  font-size: 10px;
+  color: #838383;
+}
+
+.chat-container header {
+  border-left: solid rgb(215, 215, 215) 1px;
+}
+
+.chat-container {
+  min-width: 400px;
+}
+
+.chat {
+  background-image: url(img/mine.jpg);
+  flex-grow: 1;
+  height: calc(100% - 50px - 45px);
+  overflow-y: auto;
+}
+
+footer {
+  margin-top: auto;
+  height: 50px;
+}
+
+.bar-footer {
+  padding: 5px;
+  background-color: #fdf9fa;
+  display: flex;
+}
+
+.footer-chat {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 10px 0;
+  background-color: white;
+  border-radius: 2px;
+}
+
+.bar-footer i {
+  margin: 13px 20px 0 20px;
+  color: #bcbebd;
+  font-size: 12px;
+}
+
+.footer-chat input[type="text"] {
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 10px;
+  padding: 0 20px;
+  border-radius: 5px;
 }

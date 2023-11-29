@@ -97,7 +97,46 @@
       <!-- /container contatti -->
 
       <!-- container chat -->
-      <div class="app-container chat-container"></div>
+      <div class="app-container chat-container">
+        <!-- Profilo chat -->
+        <header class="common-container user-container">
+          <div class="user-info">
+            <div class="profile-pic user-pic rounded-5">
+              <img
+                :src="contacts[1].avatar"
+                class="avatar"
+                :alt="contacts[1].name + ' Avatar'"
+              />
+            </div>
+            <div class="cavatar-text">
+              <div>{{ contacts[1].name }}</div>
+              <div>Ultimo accesso oggi alle 12:00</div>
+            </div>
+          </div>
+          <div class="icons-container">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <i class="fa-solid fa-paperclip"></i>
+            <i class="fa-solid fa-ellipsis-vertical"></i>
+          </div>
+        </header>
+        <!-- /Profilo chat -->
+
+        <!-- Contenuto Chat -->
+        <div class="chat"></div>
+        <!-- /Contenuto Chat -->
+
+        <!-- Barra di invio messaggi -->
+        <footer>
+          <div class="bar-footer">
+            <i class="fa-solid fa-face-smile"></i>
+            <div class="footer-chat">
+              <input type="text" placeholder="Cerca o inizia una nuova chat" />
+            </div>
+            <i class="fa-solid fa-microphone"></i>
+          </div>
+        </footer>
+        <!-- /Barra di invio messaggi -->
+      </div>
       <!-- /container chat -->
     </div>
     <!-- /container principale con implementazione vue js -->
