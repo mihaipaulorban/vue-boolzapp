@@ -138,7 +138,12 @@
           <div class="bar-footer">
             <i class="fa-solid fa-face-smile"></i>
             <div class="footer-chat">
-              <input type="text" placeholder="Cerca o inizia una nuova chat" />
+              <input
+                type="text"
+                placeholder="Cerca o inizia una nuova chat"
+                v-model="newMessage"
+                @keyup.enter="() => sendMessage()"
+              />
             </div>
             <i class="fa-solid fa-microphone"></i>
           </div>

@@ -39,3 +39,7 @@ Poi con un `v-for` vengono ciclati tutti i messaggi del contatto selezionato e v
 Per l'ora invece ho usatao un'altra funzione `extractTime(dateTime)` che usa il metodo split per dividere la data dall'ora e poi viene usato ancora per dividere la data in giorni mesi e anno per un suo futuro uso.
 
 Infine con `return `${hours}:${minutes}`;` faccio il return solo dell'ora e dei minuti dell'invio del messaggio.
+
+## Milestone 3
+
+Per la milestone 3 l'obbiettivo é far fuzionare l'input type text della chat e poter inserire un messaggio da inviare, per poi ricevere una risposta preimpostata dal bot dopo 1 secondo.

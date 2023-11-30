@@ -1,5 +1,8 @@
 "use strict";
 
+// Le => quando richiamo funzioni nell'html servono per non dare errori di contesto alle funzioni
+// dato che vue crea effettivamente delle funzioni freccia che richiamano le mie funzioni
+
 //Destrutturo createApp da Vue JS
 const { createApp } = Vue;
 
@@ -173,6 +176,9 @@ const myApp = createApp({
       ],
       // Indice del contatto selezionato
       selectedContactIndex: null,
+
+      // Messaggi da inviare
+      newMessage: "",
     };
   },
   methods: {
@@ -188,6 +194,20 @@ const myApp = createApp({
       const [hours, minutes, seconds] = timePart.split(":");
 
       return `${hours}:${minutes}`;
+    },
+
+    // Funzione per inviare messaggi in Chat
+    sendMessage() {
+      if (this.selectedContactIndex !== null && this.newMessage.trim() !== "") {
+        const message = {
+          date: new Date().toLocaleString(),
+          message: this.newMessage.trim(),
+          status: "sent",
+        };
+        // Questo this seve a far si che il messaggio vada nella chat corrente
+        this.contacts[this.selectedContactIndex].messages.push(message);
+        this.newMessage = "";
+      }
     },
   },
 });
