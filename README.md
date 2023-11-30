@@ -59,3 +59,7 @@ Ho gestito l'invio dei messaggi con la funzione `sendMessage()` che:
 Invece per l'invio automatico del freddo messaggio dei nostri amici ho scritto la funzione `sendReply()` che semplicemente manda un testo preimpostato 'OK' con lo status received e la gestione della data come quella del messaggio che invio io.
 
 Viene richiamata da send message un secondo dopo il mio invio del messaggio, ho usato una funzione freccia per mantenere il contesto di `this` dato che altrimenti vue mi da errore e non riesce a trovare la funzione.
+
+## Milestone 4
+
+Per la milestone 4 dobbiamo gestire la barra di ricerca per la quale io ho deciso di usare computed dato che con le computed properties i dati dell'input vengono calcolati automaticamente in base ai dati all'interno della lista e non devo farlo manualmente, tutto ció lo fa riferendosi a `searchQuery` e la lista viene filtrata da vue senza che io mi complichi la vita.
