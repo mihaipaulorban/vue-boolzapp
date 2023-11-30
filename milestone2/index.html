@@ -122,7 +122,12 @@
               :key="message.date"
               :class="{ 'received': message.status === 'received', 'sent': message.status === 'sent' }"
             >
-              <p>{{ message.message }}</p>
+              <div class="message">
+                <div class="msg-text">
+                  <p class="content">{{ message.message }}</p>
+                </div>
+                <span class="timestamp">{{ extractTime(message.date) }}</span>
+              </div>
             </div>
           </div>
         </div>

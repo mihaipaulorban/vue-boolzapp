@@ -23,3 +23,19 @@ La stessa identica cosa viene fatta nella lista di contatti ma con un ciclo for,
 ## Milestone 2
 
 Per la milestone 2 dobbiamo occuparci della visualizzazione dinamica dei messaggi, quindi tramite la direttiva v-for visualizzare tutti i messaggi realtivi al contatto attivo all'interno del pannello della conversazione e mostrare la conversazione del contatto al click su di esso.
+
+Ho approcciato il problema della visualizzazione dinamica dei messaggi per ogni chat con una funzione `showChat`all'interno dei metodi di Vue.
+
+Questa funzione impostal'indice del contatto selezionato nella variabile `selectedContactIndex`, mostrando la chat associata a quel contatto.
+
+- Quano il contatto viene cliccato, tramite @Click, Vue passa l'indice del contatto alla funzione
+
+- L'`index` ricevuto viene assegnato alla variabile `selectedContactIndex` nell'oggetto `data` e identifica il contatto selezionato dalla lista
+
+Nella sezione messaggi dell'HTML poi un div con un v-if controlla se `selectedContactIndex` é null o no e il contenuto viene visualizzato solo se non lo é.
+
+Poi con un `v-for` vengono ciclati tutti i messaggi del contatto selezionato e vengono inseriti nella chat
+
+Per l'ora invece ho usatao un'altra funzione `extractTime(dateTime)` che usa il metodo split per dividere la data dall'ora e poi viene usato ancora per dividere la data in giorni mesi e anno per un suo futuro uso.
+
+Infine con `return `${hours}:${minutes}`;` faccio il return solo dell'ora e dei minuti dell'invio del messaggio.

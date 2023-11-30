@@ -181,6 +181,14 @@ const myApp = createApp({
       this.selectedContactIndex = index;
       console.log(this.selectedContactIndex);
     },
+    // Funzione che estrae l'ora dalla data
+    extractTime(dateTime) {
+      const [datePart, timePart] = dateTime.split(" ");
+      const [day, month, year] = datePart.split("/");
+      const [hours, minutes, seconds] = timePart.split(":");
+
+      return `${hours}:${minutes}`;
+    },
   },
 });
 
