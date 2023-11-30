@@ -43,3 +43,19 @@ Infine con `return `${hours}:${minutes}`;` faccio il return solo dell'ora e dei 
 ## Milestone 3
 
 Per la milestone 3 l'obbiettivo é far fuzionare l'input type text della chat e poter inserire un messaggio da inviare, per poi ricevere una risposta preimpostata dal bot dopo 1 secondo.
+
+Ho gestito l'invio dei messaggi con la funzione `sendMessage()` che:
+
+- con un `if` controlla se l'input é vuoto e in caso contrario lo trimma per evitare spazi
+
+-aggiunge la data attuale dell'invio del messaggio e il messaggio in sé
+
+-imposta lo stato sent dato che il messaggio lo inviamo noi in chat
+
+- con `this.contacts[this.selectedContactIndex].messages.push(message);`si assicura che il messaggio sia inserito nella chat corrente e non in un altra
+
+-infine svuota l'input
+
+Invece per l'invio automatico del freddo messaggio dei nostri amici ho scritto la funzione `sendReply()` che semplicemente manda un testo preimpostato 'OK' con lo status received e la gestione della data come quella del messaggio che invio io.
+
+Viene richiamata da send message un secondo dopo il mio invio del messaggio, ho usato una funzione freccia per mantenere il contesto di `this` dato che altrimenti vue mi da errore e non riesce a trovare la funzione.

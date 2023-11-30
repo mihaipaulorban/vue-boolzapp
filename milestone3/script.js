@@ -207,7 +207,24 @@ const myApp = createApp({
         // Questo this seve a far si che il messaggio vada nella chat corrente
         this.contacts[this.selectedContactIndex].messages.push(message);
         this.newMessage = "";
+
+        // La funzione freccia come citato sopra serve a mantenere il contesto corretto per il this
+        setTimeout(() => {
+          this.sendReply();
+        }, 1000);
       }
+    },
+
+    // Funzione per la risposta automatica
+    sendReply() {
+      const reply = {
+        date: new Date().toLocaleString(),
+        message: "OK",
+        status: "received",
+      };
+
+      // Questo this seve a far si che il messaggio vada nella chat corrente
+      this.contacts[this.selectedContactIndex].messages.push(reply);
     },
   },
 });
