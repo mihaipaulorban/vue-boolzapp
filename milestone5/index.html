@@ -105,14 +105,23 @@
           <div class="user-info">
             <div class="profile-pic user-pic">
               <img
-                :src="contacts[1].avatar"
+                v-if="selectedContactIndex !== null && contacts[selectedContactIndex]"
+                :src="contacts[selectedContactIndex].avatar"
                 class="avatar"
-                :alt="contacts[1].name + ' Avatar'"
+                :alt="contacts[selectedContactIndex].name + ' Avatar'"
               />
             </div>
             <div class="cavatar-text">
-              <div>{{ contacts[1].name }}</div>
-              <div>Ultimo accesso oggi alle 12:00</div>
+              <div
+                v-if="selectedContactIndex !== null && contacts[selectedContactIndex]"
+              >
+                {{ contacts[selectedContactIndex].name }}
+              </div>
+              <div
+                v-if="selectedContactIndex !== null && contacts[selectedContactIndex].lastAccess"
+              >
+                Ultimo accesso: {{ contacts[selectedContactIndex].lastAccess }}
+              </div>
             </div>
           </div>
           <div class="icons-container">
