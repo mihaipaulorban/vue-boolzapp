@@ -63,3 +63,7 @@ Viene richiamata da send message un secondo dopo il mio invio del messaggio, ho 
 ## Milestone 4
 
 Per la milestone 4 dobbiamo gestire la barra di ricerca per la quale io ho deciso di usare computed dato che con le computed properties i dati dell'input vengono calcolati automaticamente in base ai dati all'interno della lista e non devo farlo manualmente, tutto ció lo fa riferendosi a `searchQuery` e la lista viene filtrata da vue senza che io mi complichi la vita.
+
+## Milestone 5
+
+Per la milestone 5 dobbiamo gestire la cancellazione dei messaggi e la visualizzazione dell'ultimo messaggio nella lista dei contatti
