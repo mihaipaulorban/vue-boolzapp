@@ -1,0 +1,291 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-image: linear-gradient(to bottom, #009788 20%, #dbdbd1 20%);
+  background-size: 100% 100%;
+  background-attachment: fixed;
+  font-family: "Lato", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Container app principale */
+
+.main-container {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app-container {
+  height: 100%;
+}
+
+.contact-container {
+  width: 30%;
+  background-color: white;
+  min-height: 300px;
+  max-height: 100vh;
+  min-width: 300px;
+  overflow: auto;
+}
+
+.chat-container {
+  width: 70%;
+  background-color: lightgreen;
+  min-width: 400px;
+}
+
+/* Sezione contatti */
+
+.common-container {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+}
+
+/* Container profilo */
+
+.user-container {
+  background-color: #eaeaea;
+  justify-content: space-between;
+  height: 50px;
+}
+
+.profile-pic {
+  overflow: hidden;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.user-pic {
+  width: 40px;
+  height: 40px;
+}
+
+.avatar {
+  width: 100%;
+  height: auto;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.icons-container .fa-solid {
+  color: #b1b1b1;
+  margin: 0 7px;
+}
+
+/* Sezione notifiche */
+.bell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px 0px 10px;
+  background-color: #effdfe;
+  padding: 10px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+.notify-container {
+  background-color: #8ad9f8;
+  height: 60px;
+}
+
+.fa-bell-slash {
+  font-size: 17px;
+  color: #8ad9f8;
+}
+
+.not-text {
+  line-height: 1;
+}
+
+.not-text div {
+  font-size: 13px;
+  margin-bottom: 0;
+}
+
+.not-text a {
+  font-size: 11px;
+  color: #386578;
+}
+
+/* Barra di ricerca */
+.bar-container {
+  padding: 5px;
+  background-color: #fdf9fa;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 5px 0;
+  background-color: white;
+  border-radius: 2px;
+}
+
+.search-bar i {
+  margin: 2px 15px 0 15px;
+  color: #bcbebd;
+  font-size: 14px;
+}
+
+.search-bar input[type="text"] {
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 13px;
+}
+
+/* Lista contatti */
+
+.contact-name {
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.contact-pic {
+  width: 50px;
+  height: 50px;
+}
+
+.contact-panel {
+  background-color: white;
+  border-bottom: solid rgb(233, 233, 233) 1px;
+  height: 60px;
+}
+
+.contact-list {
+  max-height: calc(100% - 60px);
+  overflow-y: auto;
+}
+
+/* Sezione Chat */
+
+.cavatar-text {
+  line-height: 1.5;
+}
+
+.cavatar-text div {
+  font-size: 15px;
+  margin-bottom: 0;
+}
+
+.cavatar-text div:last-child {
+  font-size: 10px;
+  color: #838383;
+}
+
+.chat-container header {
+  border-left: solid rgb(215, 215, 215) 1px;
+}
+
+.chat-container {
+  min-width: 400px;
+}
+
+.chat {
+  background-image: url(img/mine.jpg);
+  flex-grow: 1;
+  height: calc(100% - 50px - 45px);
+  overflow-y: auto;
+}
+
+footer {
+  margin-top: auto;
+  height: 50px;
+}
+
+.bar-footer {
+  padding: 7px;
+  background-color: #fdf9fa;
+  display: flex;
+}
+
+.footer-chat {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 7.5px 0;
+  background-color: white;
+  border-radius: 2px;
+}
+
+.bar-footer i {
+  margin: 8px 20px 0 20px;
+  color: #bcbebd;
+  font-size: 15 px;
+}
+
+.footer-chat input[type="text"] {
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 14px;
+  padding: 0 20px;
+  border-radius: 5px;
+}
+
+/* Stile messaggi */
+
+.mess-container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+}
+.msg-text {
+  width: 90%;
+}
+
+.received,
+.sent {
+  text-align: left;
+  padding: 20px;
+  border-radius: 8px;
+  width: fit-content;
+  min-width: 300px;
+  word-wrap: break-word;
+  font-weight: 300;
+}
+
+.sent {
+  background-color: #d5f9ba;
+  margin: 20px 120px 5px 0;
+  align-self: flex-end;
+}
+
+.received {
+  background-color: white;
+  margin: 20px 0 5px 120px;
+  align-self: flex-start;
+}
+
+.message {
+  position: relative;
+}
+
+.timestamp {
+  font-size: 10px;
+  color: #838383;
+  position: absolute;
+  bottom: -10px;
+  right: 0px;
+}

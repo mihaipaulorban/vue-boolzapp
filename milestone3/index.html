@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Boolzapp</title>
+
+    <!-- GOOGLE FONT LATO -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- FONTAWESOME -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- container principale con implementazione vue js -->
+    <div class="main-container" id="app">
+      <!-- container contatti -->
+      <div class="app-container contact-container">
+        <header class="common-container user-container">
+          <div class="user-info">
+            <div class="profile-pic user-pic">
+              <img src="img/avatar_1.jpg" class="avatar" alt="User Avatar" />
+            </div>
+            <div>Paul</div>
+          </div>
+          <div class="icons-container">
+            <i class="fa-solid fa-circle-notch"></i>
+            <i class="fa-solid fa-message"></i>
+            <i class="fa-solid fa-ellipsis-vertical"></i>
+          </div>
+        </header>
+
+        <!-- Sezione notifiche nuovi messaggi -->
+        <div class="common-container notify-container">
+          <div class="bell">
+            <i class="fa-solid fa-bell-slash"></i>
+          </div>
+          <div class="not-text">
+            <div>Ricevi notifiche dei nuovi messaggi</div>
+            <a href="">Attiva le notifiche Desktop</a>
+          </div>
+        </div>
+        <!-- /Sezione notifiche nuovi messaggi -->
+
+        <!-- Barra di ricerca -->
+        <div class="bar-container">
+          <div class="search-bar">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="Cerca o inizia una nuova chat" />
+          </div>
+        </div>
+        <!-- Barra di ricerca -->
+
+        <!-- Lista Contatti -->
+        <div class="contact-list">
+          <div
+            class="common-container contact-panel"
+            v-for="(contact, index) in contacts"
+            :key="index"
+            @click="() => showChat(index)"
+          >
+            <div class="user-info">
+              <div class="profile-pic contact-pic rounded-5">
+                <img
+                  :src="contact.avatar"
+                  class="avatar"
+                  :alt="contact.name + ' Avatar'"
+                />
+              </div>
+              <div class="contact-name">{{ contact.name }}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--i Lista Contatti -->
+      <!-- /container contatti -->
+
+      <!-- container chat -->
+      <div class="app-container chat-container">
+        <!-- Profilo chat -->
+        <header class="common-container user-container">
+          <div class="user-info">
+            <div class="profile-pic user-pic rounded-5">
+              <img
+                :src="contacts[1].avatar"
+                class="avatar"
+                :alt="contacts[1].name + ' Avatar'"
+              />
+            </div>
+            <div class="cavatar-text">
+              <div>{{ contacts[1].name }}</div>
+              <div>Ultimo accesso oggi alle 12:00</div>
+            </div>
+          </div>
+          <div class="icons-container">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <i class="fa-solid fa-paperclip"></i>
+            <i class="fa-solid fa-ellipsis-vertical"></i>
+          </div>
+        </header>
+        <!-- /Profilo chat -->
+
+        <!-- Contenuto Chat -->
+        <div class="chat">
+          <div v-if="selectedContactIndex !== null" class="mess-container">
+            <div
+              v-for="message in contacts[selectedContactIndex].messages"
+              :key="message.date"
+              :class="{ 'received': message.status === 'received', 'sent': message.status === 'sent' }"
+            >
+              <div class="message">
+                <div class="msg-text">
+                  <p class="content">{{ message.message }}</p>
+                </div>
+                <span class="timestamp">{{ extractTime(message.date) }}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /Contenuto Chat -->
+
+        <!-- Barra di invio messaggi -->
+        <footer>
+          <div class="bar-footer">
+            <i class="fa-solid fa-face-smile"></i>
+            <div class="footer-chat">
+              <input type="text" placeholder="Cerca o inizia una nuova chat" />
+            </div>
+            <i class="fa-solid fa-microphone"></i>
+          </div>
+        </footer>
+        <!-- /Barra di invio messaggi -->
+      </div>
+      <!-- /container chat -->
+    </div>
+    <!-- /container principale con implementazione vue js -->
+
+    <!-- VUE JS -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <!-- JS -->
+    <script src="script.js"></script>
+  </body>
+</html>
