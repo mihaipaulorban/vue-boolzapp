@@ -19,3 +19,7 @@ I dati vengono salvati in un array di oggetti (`contacts`) nel quale ci sono dei
 Per l'interfaccia dell'header ho usato Vue per ottenere dinamicamente i dettagli del contatto, come l'avatar e il nome, dall'array dei contatti, con `contacts[1].avatar` e `contacts[1].name`.
 
 La stessa identica cosa viene fatta nella lista di contatti ma con un ciclo for, quindi vue scorre fra tutti gli oggetti degli array e genera un pannello per ogni contatto, essendo che non ho specificato un contatto specifico li genera tutti.
+
+## Milestone 2
+
+Per la milestone 2 dobbiamo occuparci della visualizzazione dinamica dei messaggi, quindi tramite la direttiva v-for visualizzare tutti i messaggi realtivi al contatto attivo all'interno del pannello della conversazione e mostrare la conversazione del contatto al click su di esso.
