@@ -110,3 +110,13 @@ Funzione per l'Eliminazione:
 -La funzione accetta l'ID del contatto che desideri eliminare.
 -Cercherà il messaggio corrispondente all'ID all'interno dell'array `messages`.
 -Una volta trovato, utilizzerá l'array `splice` per rimuovere quel messaggio dall'elenco dei messaggi.
+
+## Bonus!
+
+Per i bonus non staró a spiegare troppo la logica o i procedimenti perché continuare a scrivere nel readme é un dispendio di tempo che posso utilizzare per fare altri bonus.
+
+Faró invece una semplice lista dei bonus implementati con qualche dettaglio sull'implementazione
+
+Lista bonus:
+
+- Icona dell'aereoplanino quando scrivi (ho usato un semplice if/else che rimuove classie le aggiunge, la logica dell'invio l'avevo giá inclusa prima)
