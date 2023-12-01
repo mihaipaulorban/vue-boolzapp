@@ -81,3 +81,32 @@ Nel mio cosa la funzione é:
 - `contact => contact.id === contactId` é la funzione di callback che viene passata a `find` e da la condizione, quindi si verifica se l'id di un elemento dell'array `contacts` é uguale a `contactId` che è l'identificatore univoco del contatto su cui è stata effettuata la selezione (ad esempio, quando si clicca su un contatto nella lista).
 
 Per mostrare l'ultimo messaggio nella lista contatti ho scritto una funzione `getLastMessage` che restituisce l'indice dell'ultimo dato dell'array dei messaggi e controlla sel `lastMessage` esiste realmente, se esiste viene restituito altrimenti viene stampata una stringa vuota.
+
+Per la funzionalitá di eliminazione contatti la logica é la seguente
+Ho usato le funzioni `showDeleteConfirmation`, `deleteMessage`, e `cancelDelete` per controllare la visibilità della tendina e gestire l'eliminazione effettiva del messaggio.
+
+Icona di Eliminazione:
+
+- C'è un'icona accanto a ciascun messaggio.
+- Quando clicchi sull'icona, la funzione showDeleteConfirmation viene chiamata e passa il messaggio come parametro.
+- Questa funzione controlla se altre tendine di eliminazione sono aperte e le chiude, quindi apre o chiude la tendina per eliminare il messaggio corrente.
+
+Tendina di Conferma:
+
+- Quando viene cliccata l'icona di eliminazione, compare una piccola tendina sotto il messaggio.
+- Questa tendina contiene due bottoni: "Elimina" e "Annulla".
+  Se clicchi su "Elimina", la funzione deleteMessage viene chiamata e il messaggio corrente viene rimosso dalla lista dei messaggi del contatto.
+  Se clicchi su "Annulla", la tendina scompare senza rimuovere il messaggio.
+
+La logica per eliminare i contatti funziona con una funzione che gestisce l'eliminazione quando un contatto viene selezionato per essere rimosso dalla lista.
+
+Selezione del Contatto da Eliminare:
+
+-All'interno della webapp, c'è un'interfaccia utente che mostra una lista di contatti.
+-Quando un messaggio deve essere eliminato, è necessario attivare questa azione tramite un'interazione che come spiegato sopra ho impostato sulla tendina.
+
+Funzione per l'Eliminazione:
+
+-La funzione accetta l'ID del contatto che desideri eliminare.
+-Cercherà il messaggio corrispondente all'ID all'interno dell'array `messages`.
+-Una volta trovato, utilizzerá l'array `splice` per rimuovere quel messaggio dall'elenco dei messaggi.

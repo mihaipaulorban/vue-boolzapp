@@ -268,6 +268,34 @@ const myApp = createApp({
       }
       return message;
     },
+
+    // Funzione per mostrare la tendina di conferma eliminazione
+    showDeleteConfirmation(message) {
+      this.contacts[this.selectedContactIndex].messages.forEach((msg) => {
+        if (msg !== message) {
+          msg.showConfirmation = false; // Chiude le altre tendine aperte
+        }
+      });
+      message.showConfirmation = !message.showConfirmation;
+    },
+
+    // Funzione per eliminare il messaggio
+    deleteMessage(message) {
+      const messageIndex =
+        this.contacts[this.selectedContactIndex].messages.indexOf(message);
+      if (messageIndex !== -1) {
+        this.contacts[this.selectedContactIndex].messages.splice(
+          messageIndex,
+          1
+        );
+        message.showConfirmation = false;
+      }
+    },
+
+    // Funzione per annullare l'eliminazione
+    cancelDelete(message) {
+      message.showConfirmation = false;
+    },
   },
 });
 

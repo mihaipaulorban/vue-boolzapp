@@ -146,14 +146,44 @@
             <div
               v-for="message in contacts[selectedContactIndex].messages"
               :key="message.date"
-              :class="{ 'received': message.status === 'received', 'sent': message.status === 'sent' }"
+              :class="{
+                'received': message.status === 'received',
+                'sent': message.status === 'sent'
+              }"
+              class="message-container"
             >
+              <!-- Contenitore del messaggio -->
               <div class="message">
                 <div class="msg-text">
                   <p class="content">{{ message.message }}</p>
                 </div>
                 <span class="timestamp">{{ extractTime(message.date) }}</span>
               </div>
+
+              <!-- Icona per eliminare il messaggio -->
+              <div class="delete-message-icon">
+                <i
+                  class="fa-solid fa-chevron-down"
+                  @click="showDeleteConfirmation(message)"
+                ></i>
+                <!-- /Icona per eliminare il messaggio -->
+                <!-- Tendina per confermare l'eliminazione -->
+                <div
+                  v-if="message.showConfirmation"
+                  class="confirmation-dropdown"
+                >
+                  <div class="delete-container">
+                    <button class="drop-button" @click="deleteMessage(message)">
+                      Elimina
+                    </button>
+                    <button class="drop-button" @click="cancelDelete(message)">
+                      Annulla
+                    </button>
+                  </div>
+                  <!-- /Tendina per confermare l'eliminazione -->
+                </div>
+              </div>
+              <!-- /Contenitore del messaggio -->
             </div>
           </div>
         </div>
