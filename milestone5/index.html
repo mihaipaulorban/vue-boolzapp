@@ -77,10 +77,10 @@
         <div class="contact-list">
           <div
             class="common-container contact-panel"
-            v-for="(contact, index) in filteredContacts"
-            :key="index"
-            @click="() => showChat(index)"
-            :class="{ 'selected-contact': selectedContactIndex === index }"
+            v-for="contact in filteredContacts"
+            :key="contact.id"
+            @click="() => showChat(contact.id)"
+            :class="{ 'selected-contact': contact.id === contacts[selectedContactIndex]?.id }"
           >
             <div class="user-info">
               <div class="profile-pic contact-pic">
@@ -99,9 +99,9 @@
       <!-- /container contatti -->
 
       <!-- container chat -->
-      <div class="app-container chat-container">
+      <main class="app-container chat-container">
         <!-- Profilo chat -->
-        <header class="common-container user-container">
+        <div class="common-container user-container">
           <div class="user-info">
             <div class="profile-pic user-pic">
               <img
@@ -129,7 +129,7 @@
             <i class="fa-solid fa-paperclip"></i>
             <i class="fa-solid fa-ellipsis-vertical"></i>
           </div>
-        </header>
+        </div>
         <!-- /Profilo chat -->
 
         <!-- Contenuto Chat -->
@@ -167,7 +167,7 @@
           </div>
         </footer>
         <!-- /Barra di invio messaggi -->
-      </div>
+      </main>
       <!-- /container chat -->
     </div>
     <!-- /container principale con implementazione vue js -->
