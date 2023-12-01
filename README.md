@@ -120,3 +120,7 @@ Faró invece una semplice lista dei bonus implementati con qualche dettaglio sul
 Lista bonus:
 
 - Icona dell'aereoplanino quando scrivi (ho usato un semplice if/else che rimuove classie le aggiunge, la logica dell'invio l'avevo giá inclusa prima)
+
+- visualizzare nella lista dei contatti l'ultimo messaggio inviato/ricevuto da ciascun contatto (l'ho fatto prima senza sapere fosse un bonus)
+
+-
