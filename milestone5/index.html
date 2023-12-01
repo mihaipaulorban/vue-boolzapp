@@ -90,7 +90,15 @@
                   :alt="contact.name + ' Avatar'"
                 />
               </div>
-              <div class="contact-name">{{ contact.name }}</div>
+              <div class="contact-name">
+                <div class="name-changing">{{ contact.name }}</div>
+                <div class="last-message">
+                  {{ shortMessage(getLastMessage(contact)) }}
+                </div>
+              </div>
+            </div>
+            <div class="last-access">
+              <div>12:00</div>
             </div>
           </div>
         </div>

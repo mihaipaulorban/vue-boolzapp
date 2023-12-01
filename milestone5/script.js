@@ -254,6 +254,12 @@ const myApp = createApp({
       this.contacts[this.selectedContactIndex].messages.push(reply);
     },
 
+    // Funzione che recupera l'ultimo messaggio del contatto
+    getLastMessage(contact) {
+      const lastMessage = contact.messages[contact.messages.length - 1];
+      return lastMessage ? lastMessage.message : "";
+    },
+
     //Funzione per far si che l'ultimo messaggio dalla lista non sia troppo lungo
     shortMessage(message) {
       const maxLength = 25;

@@ -79,3 +79,5 @@ Nel mio cosa la funzione é:
 - `this.contact.find` dice alla funzione find che deve cercare nel contesto this dentro l'oggetto contact
 
 - `contact => contact.id === contactId` é la funzione di callback che viene passata a `find` e da la condizione, quindi si verifica se l'id di un elemento dell'array `contacts` é uguale a `contactId` che è l'identificatore univoco del contatto su cui è stata effettuata la selezione (ad esempio, quando si clicca su un contatto nella lista).
+
+Per mostrare l'ultimo messaggio nella lista contatti ho scritto una funzione `getLastMessage` che restituisce l'indice dell'ultimo dato dell'array dei messaggi e controlla sel `lastMessage` esiste realmente, se esiste viene restituito altrimenti viene stampata una stringa vuota.

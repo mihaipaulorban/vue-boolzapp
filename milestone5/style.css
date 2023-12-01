@@ -57,7 +57,6 @@ footer .fa-solid:hover {
 
 .common-container {
   display: flex;
-  align-items: center;
   padding: 5px;
 }
 
@@ -67,6 +66,7 @@ footer .fa-solid:hover {
   background-color: #eaeaea;
   justify-content: space-between;
   height: 50px;
+  align-items: center;
 }
 
 .profile-pic {
@@ -113,6 +113,7 @@ footer .fa-solid:hover {
 .notify-container {
   background-color: #8ad9f8;
   height: 60px;
+  align-items: center;
 }
 
 .fa-bell-slash {
@@ -164,9 +165,14 @@ footer .fa-solid:hover {
 
 /* Lista contatti */
 
-.contact-name {
-  margin-bottom: 20px;
-  font-weight: bold;
+.name-changing {
+  margin-bottom: 5px;
+}
+
+.last-message {
+  color: #b4b4b4;
+  font-weight: 300;
+  font-size: 14px;
 }
 
 .contact-pic {
@@ -179,11 +185,19 @@ footer .fa-solid:hover {
   border-bottom: solid rgb(233, 233, 233) 1px;
   height: 60px;
   width: 100%;
+  justify-content: space-between;
 }
 
 .contact-list {
   max-height: calc(100% - 60px);
   overflow-y: auto;
+}
+
+.last-access {
+  font-weight: 300;
+  color: #b4b4b4;
+  font-size: 12px;
+  margin-top: 5px;
 }
 
 /* Sezione Chat */
